@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page" style="width: 60%;">
+
+  <div class="page-item">
+    <h1>{{ role }} COVID Dashboard</h1>
+  </div>
+
+  <div class="page-item home-page-buttons">
+    <!-- Everyone should be able to view aggregate results and view daily results -->
+    <a href="{{ url_for('view_cases_county') }}">
+        <button class="btn btn-primary">View Cumulative Covid Cases (County Level)</button>
+    </a>
+    <a href="{{ url_for('view_daily_cases') }}">
+        <button class="btn btn-primary">View Daily Covid Cases (County Level)</button>
+    </a>
+    <a href="{{ url_for('view_county_ratio') }}">
+        <button class="btn btn-primary">View Covid Cases (Population Ratio)</button>
+    </a>
+    <a href="{{ url_for('view_deaths_county') }}">
+        <button class="btn btn-primary">View Covid Deaths (County Level)</button>
+    </a>
+    <a href="{{ url_for('view_vac_dis') }}">
+        <button class="btn btn-primary">View Vaccination Distribution (State Level)</button>
+    </a>
+    <a href="{{ url_for('view_vac_ratio') }}">
+        <button class="btn btn-primary">View Vaccination Distribution (Population Ratio)</button>
+    </a>
+
+
+</div>
+{% endblock %}
